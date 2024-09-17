@@ -418,7 +418,7 @@ class EventBean implements Samplable
         if (empty($this->contexts['custom']) === false) {
             $context['custom'] = $this->contexts['custom'];
 
-            foreach (['db', 'http', 'destination'] as $key) {
+            foreach (['db', 'http', 'destination', 'service', 'message'] as $key) {
                 if (empty($this->contexts['custom'][$key]) === false) {
                     $context[$key] = $this->contexts['custom'][$key];
                 }
