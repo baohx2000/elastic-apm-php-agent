@@ -230,7 +230,7 @@ class EventBean implements Samplable
      */
     final public function setCustomContext(array $customContext) // TODO to not allow setting, prefer immutable
     {
-        $this->contexts['custom'] = array_merge($this->contexts['custom'], $customContext);
+        $this->contexts['custom'] = array_merge_recursive($this->contexts['custom'], $customContext);
     }
 
     /**
